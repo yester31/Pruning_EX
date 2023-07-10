@@ -85,9 +85,9 @@
 		</tr>
 		<tr>
 			<td>FPS [frame/sec]</td>
-			<td>271.14 fps</td>
-			<td>396.47 fps</td>
-			<td>757.00 fps</td>
+			<td>291.35 fps</td>
+			<td>291.72 fps</td>
+			<td>319.39 fps</td>
 		</tr>
 	</tbody>
 </table>
@@ -139,3 +139,8 @@
 		</tr>
 	</tbody>
 </table>
+
+## reference   
+* Torch-Pruning : <https://github.com/VainF/Torch-Pruning>
+* mit-han-lab(6s965-fall2022) : <https://github.com/mit-han-lab/6s965-fall2022>
+* imagenet100 : <https://www.kaggle.com/datasets/ambityga/imagenet100>
