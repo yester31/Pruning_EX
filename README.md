@@ -54,22 +54,22 @@
 <table border="0"  width="100%">
 	<tbody align="center">
 		<tr>
-			<td>Pytorch (FP32)</td>
+			<td></td>
 			<td><strong>Base Model</strong></td>
             <td><strong>Prun Model 1</strong></td>
             <td><strong>Prun Model 2</strong></td>
         </tr>
 		<tr>
-			<td>acc1</td>
+			<td>Accuracy</td>
             <td>82.26</td>
             <td>82.26</td>
             <td>81.84</td>
 		</tr>
 		<tr>
-			<td>Params</td>
-            <td>11.23 M</td>
-            <td>7.17 M</td>
-            <td>5.79 M</td>
+			<td>Params [Mb]</td>
+            <td>11.23 Mb</td>
+            <td>7.17 Mb</td>
+            <td>5.79 Mb</td>
 		</tr>
         <tr>
 			<td>MACs</td>
@@ -77,8 +77,19 @@
 			<td>1.18 G</td>
 			<td>0.95 G</td>
 		</tr>
+	</tbody>
+</table>
+        
+<table border="0"  width="100%">
+	<tbody align="center">
+		<tr>
+			<td>Pytorch (FP32) </td>
+			<td><strong>Base Model</strong></td>
+            <td><strong>Prun Model 1</strong></td>
+            <td><strong>Prun Model 2</strong></td>
+        </tr>
         <tr>
-			<td>Avg latency [ms]</td>
+			<td>Avg Latency [ms]</td>
 			<td>3.432 ms</td>
 			<td>3.427 ms</td>
 			<td>3.130 ms</td>
@@ -91,8 +102,6 @@
 		</tr>
 	</tbody>
 </table>
-        
-
 
 <table border="0"  width="100%">
 	<tbody align="center">
@@ -103,7 +112,7 @@
             <td><strong>Prun Model 2</strong></td>
 		</tr>
         <tr>
-			<td>Avg latency [ms]</td>
+			<td>Avg Latency [ms]</td>
 			<td>1.486 ms</td>
 			<td>1.168 ms</td>
 			<td>1.024 ms</td>
@@ -126,7 +135,7 @@
             <td><strong>Prun Model 2</strong></td>
 		</tr>
         <tr>
-			<td>Avg latency [ms]</td>
+			<td>Avg Latency [ms]</td>
 			<td>0.542 ms</td>
 			<td>0.518 ms</td>
 			<td>0.501 ms</td>
