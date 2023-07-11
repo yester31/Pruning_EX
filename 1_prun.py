@@ -42,14 +42,14 @@ def main() :
     for split in ['train', 'test']:
       dataloader[split] = DataLoader(dataset[split], batch_size=512, shuffle=(split == 'train'), num_workers=0, pin_memory=True,)
 
-    # dense_model_accuracy = evaluate(model, dataloader['test'])
-    # dense_model_size = get_model_size(model)
-    # print(f"dense model has accuracy={dense_model_accuracy:.2f}%")
-    # print(f"dense model has size={dense_model_size/MiB:.2f} MiB")
+    dense_model_accuracy = evaluate(model, dataloader['test'])
+    dense_model_size = get_model_size(model)
+    print(f"dense model has accuracy={dense_model_accuracy:.2f}%")
+    print(f"dense model has size={dense_model_size/MiB:.2f} MiB")
 
-    # plot_weight_distribution(model)
-    #
-    # plot_num_parameters_distribution(model)
+    plot_weight_distribution(model)
+
+    plot_num_parameters_distribution(model)
 
     dummy_input = torch.randn(1, 3, 32, 32).cuda()
     pruned_model = channel_prune(model, prune_ratio=0.3)

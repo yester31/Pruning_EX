@@ -1,3 +1,4 @@
+#  by yhpark 2023-07-10
 import tensorrt as trt
 import common
 from utils import *
@@ -94,8 +95,8 @@ def main():
     class_name = json.load(json_file)
 
     # 3. tensorrt model
-    # model_name = 'resnet18_imagenet_100'
-    model_name = 'resnet18_prun_loc_0.2'
+    model_name = 'resnet18_imagenet_100'
+    # model_name = 'resnet18_prun_loc_0.2'
     # model_name = 'resnet18_prun_loc_0.2_0.1'
     onnx_model_path = f"model/{model_name}.onnx"
     engine_file_path = f"model/{model_name}.trt"

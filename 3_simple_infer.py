@@ -1,4 +1,4 @@
-#  by yhpark 2023-07-07
+#  by yhpark 2023-07-10
 from utils import *
 import json
 import cv2
@@ -41,8 +41,8 @@ def main():
     model_path2 = './checkpoints/resnet18_prun_loc_0.2_0.1.pth.tar'
     # print(f" model : {model_path}")
     model_paths = []
-    model_paths.append(model_path0)
-    model_paths.append(model_path1)
+    # model_paths.append(model_path0)
+    # model_paths.append(model_path1)
     model_paths.append(model_path2)
 
     example_inputs = torch.randn(1, 3, 224, 224).to(device)

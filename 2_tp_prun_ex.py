@@ -1,6 +1,5 @@
 #  by yhpark 2023-07-08
 from utils import *
-import onnx
 import copy
 import torch_pruning as tp
 
@@ -98,8 +97,8 @@ def main():
 
 
     # 0. importance criterion for parameter selections
-    #imp = tp.importance.MagnitudeImportance(p=2, group_reduction='mean')
-    imp = tp.importance.MagnitudeImportance(p=1)
+    imp = tp.importance.MagnitudeImportance(p=2, group_reduction='mean')
+    # imp = tp.importance.MagnitudeImportance(p=1)
 
     # 1. ignore some layers that should not be pruned, e.g., the final classifier layer.
     ignored_layers = []

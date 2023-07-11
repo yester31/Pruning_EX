@@ -30,14 +30,15 @@ def main():
 
     classes = val_dataset.classes
     class_to_idx = val_dataset.class_to_idx
-    class_acc = False
+    class_acc = False # to check the accuracy of each class
+    example_inputs = torch.randn(1, 3, 224, 224).to(device)
 
     # 2. base model load
     check_path0 = './checkpoints/resnet18.pth.tar'
+    print(f" model : {check_path0}")
     model = torch.load(check_path0, map_location=device)
     test(val_loader, model, device, class_to_idx, classes, class_acc=class_acc, print_freq=10)
     #print(f"model: {model}")  # print model structure
-    example_inputs = torch.randn(1, 3, 224, 224).to(device)
     base_macs, base_nparams = tp.utils.count_ops_and_params(model, example_inputs)
     # plot_weight_distribution(model)
     # plot_num_parameters_distribution(model)
