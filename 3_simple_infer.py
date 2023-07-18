@@ -21,7 +21,6 @@ def main():
     # cv2.imshow('tt', img)
     # cv2.waitKey(0)
 
-    test_path = 'H:/dataset/imagenet100/val/n01514859/ILSVRC2012_val_00001114.JPEG'
     test_path = 'H:/dataset/imagenet100/val/n02077923/ILSVRC2012_val_00023081.JPEG'
     img = Image.open(test_path)
     #img.show()
@@ -41,9 +40,8 @@ def main():
     model_path2 = './checkpoints/resnet18_prun_loc_0.2_0.1.pth.tar'
     # print(f" model : {model_path}")
     model_paths = []
-    # model_paths.append(model_path0)
-    # model_paths.append(model_path1)
-    model_paths.append(model_path2)
+    model_paths.append(model_path1)
+
 
     example_inputs = torch.randn(1, 3, 224, 224).to(device)
     for m_idx in range(len(model_paths)):

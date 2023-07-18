@@ -94,15 +94,15 @@
         </tr>
         <tr>
       <td>Avg Latency [ms]</td>
-      <td>3.432 ms</td>
-      <td>3.427 ms</td>
-      <td>3.130 ms</td>
+      <td>2.308 ms</td>
+      <td>2.472 ms</td>
+      <td>2.328 ms</td>
     </tr>
     <tr>
       <td>Avg FPS [frame/sec]</td>
-      <td>291.35 fps</td>
-      <td>291.72 fps</td>
-      <td>319.39 fps</td>
+      <td>433.26 fps</td>
+      <td>404.51 fps</td>
+      <td>429.54 fps</td>
     </tr>
     <tr>
       <td>Gpu Memory [Mb]</td>
@@ -123,21 +123,21 @@
     </tr>
         <tr>
       <td>Avg Latency [ms]</td>
-      <td>1.486 ms</td>
-      <td>1.168 ms</td>
-      <td>1.024 ms</td>
+      <td>1.203 ms</td>
+      <td>1.029 ms</td>
+      <td>0.912 ms</td>
     </tr>
     <tr>
       <td>Avg FPS [frame/sec]</td>
-      <td>672.59 fps</td>
-      <td>855.62 fps</td>
-      <td>975.79 fps</td>
+      <td>830.60 fps</td>
+      <td>971.66 fps</td>
+      <td>1096.38 fps</td>
     </tr>
     <tr>
       <td>Gpu Memory [Mb]</td>
-      <td>165 Mb</td>
-      <td>151 Mb</td>
-      <td>143 Mb</td>
+      <td>179 Mb</td>
+      <td>161 Mb</td>
+      <td>147 Mb</td>
     </tr>
   </tbody>
 </table>
@@ -152,21 +152,21 @@
     </tr>
         <tr>
       <td>Avg Latency [ms]</td>
-      <td>0.542 ms</td>
-      <td>0.518 ms</td>
-      <td>0.501 ms</td>
+      <td>0.519 ms</td>
+      <td>0.500 ms</td>
+      <td>0.486 ms</td>
     </tr>
     <tr>
       <td>Avg FPS [frame/sec]</td>
-      <td>1845.07 fps</td>
-      <td>1928.98 fps</td>
-      <td>1997.79 fps</td>
+      <td>1924.28 fps</td>
+      <td>1996.28 fps</td>
+      <td>2054.25 fps</td>
     </tr>
     <tr>
       <td>Gpu Memory [Mb]</td>
       <td>135 Mb</td>
       <td>129 Mb</td>
-      <td>125 Mb</td>
+      <td>123 Mb</td>
     </tr>
   </tbody>
 </table>
