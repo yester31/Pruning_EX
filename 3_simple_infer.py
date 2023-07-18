@@ -2,12 +2,12 @@
 from utils import *
 import json
 import cv2
-
 from PIL import Image
-
 import torch_pruning as tp
+
+torch.backends.cudnn.benchmark = True  # 최적 cuda algorithm으로 변경 가능
 def main():
-    set_random_seeds()
+    #set_random_seeds()
     device = device_check()
 
     # 0. dataset

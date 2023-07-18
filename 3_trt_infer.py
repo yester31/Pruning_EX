@@ -78,8 +78,8 @@ def get_engine(onnx_file_path, engine_file_path="", precision="fp32"):
 
 
 def main():
-    set_random_seeds()
-    device = device_check()
+    #set_random_seeds()
+    #device = device_check()
     dur_time = 0
     iteration = 10000
 

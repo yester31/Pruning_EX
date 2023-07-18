@@ -95,18 +95,18 @@
         <tr>
       <td>Avg Latency [ms]</td>
       <td>2.308 ms</td>
-      <td>2.472 ms</td>
-      <td>2.328 ms</td>
+      <td>2.325 ms</td>
+      <td>2.213 ms</td>
     </tr>
     <tr>
       <td>Avg FPS [frame/sec]</td>
       <td>433.26 fps</td>
-      <td>404.51 fps</td>
-      <td>429.54 fps</td>
+      <td>430.10 fps</td>
+      <td>451.73 fps</td>
     </tr>
     <tr>
       <td>Gpu Memory [Mb]</td>
-      <td>341 Mb</td>
+      <td>343 Mb</td>
       <td>295 Mb</td>
       <td>271 Mb</td>
     </tr>

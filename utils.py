@@ -16,10 +16,12 @@ import torchvision.transforms as transforms
 import torch.utils.data
 from torch.optim.lr_scheduler import StepLR, MultiStepLR
 
+
 def genDir(dir_path):
     if not os.path.exists(dir_path):  # 저장할 폴더가 없다면
         os.makedirs(dir_path)  # 폴더 생성
         print(f'make directory {dir_path} is done')
+
 
 def load_checkpoint(path, model, device):
     # path = ./xxxx.pth.tar
@@ -34,10 +36,16 @@ def load_checkpoint(path, model, device):
     else:
         print(f"=> no checkpoint found at {path}")
 
+
 def set_random_seeds(random_seed=0):
     torch.manual_seed(random_seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
+    torch.cuda.manual_seed(random_seed)
+    if 1:
+        torch.backends.cudnn.deterministic = True  # deterministic algorithm 사용
+        torch.backends.cudnn.benchmark = False  # cuda algorithm 고정
+    else:
+        torch.backends.cudnn.deterministic = False  # deterministic algorithm 미사용
+        torch.backends.cudnn.benchmark = True  # 최적 cuda algorithm으로 변경 가능
     np.random.seed(random_seed)
     random.seed(random_seed)
 
@@ -164,7 +172,9 @@ def accuracy(output, target, topk=(1,)):
 color_map = [(244, 67, 54), (233, 30, 99), (156, 39, 176), (103, 58, 183), (63, 81, 181), (33, 150, 243), (3, 169, 244),
              (0, 188, 212), (0, 150, 136), (76, 175, 80)]
 
-def train(train_loader, model, criterion, optimizer, epoch, device, scaler, use_amp, writer, regularizer=None, print_freq=10):
+
+def train(train_loader, model, criterion, optimizer, epoch, device, scaler, use_amp, writer, regularizer=None,
+          print_freq=10):
     batch_time = AverageMeter('Time', ':6.3f')
     data_time = AverageMeter('data', ':6.3f')
     losses = AverageMeter('Loss', ':.4e')
@@ -186,8 +196,8 @@ def train(train_loader, model, criterion, optimizer, epoch, device, scaler, use_
         target = target.to(device, non_blocking=True)
 
         # compute output
-        #with torch.autocast(device_type='cuda', dtype=torch.float16, enabled=use_amp):
-        with torch.autocast(device_type='cuda',enabled=use_amp):
+        # with torch.autocast(device_type='cuda', dtype=torch.float16, enabled=use_amp):
+        with torch.autocast(device_type='cuda', enabled=use_amp):
             output = model(images)
             loss = criterion(output, target)
 
@@ -298,7 +308,7 @@ def validate(val_loader, model, criterion, epoch, device, class_to_idx, classes,
     return top1.avg
 
 
-def test(val_loader, model, device, class_to_idx, classes, class_acc =True, print_freq=10):
+def test(val_loader, model, device, class_to_idx, classes, class_acc=True, print_freq=10):
     batch_time = AverageMeter('Time', ':6.3f', Summary.NONE)
     losses = AverageMeter('Loss', ':.4e', Summary.NONE)
     top1 = AverageMeter('Acc@1', ':6.2f', Summary.AVERAGE)
